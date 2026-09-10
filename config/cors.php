@@ -21,6 +21,7 @@ return [
 
     'allowed_origins' => [
         'http://localhost:3000',
+        env('FRONTEND_URL', 'https://anonymous-mail.vercel.app'),
     ],
 
     'allowed_origins_patterns' => [],
