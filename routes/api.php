@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/csrf-token', function (Request $request) {
+Route::middleware('web')->get('/csrf-token', function (Request $request) {
     return response()->json([
         'token' => csrf_token(),
     ]);
