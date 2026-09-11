@@ -14,7 +14,7 @@ class AuthController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
-
+        Log::info('リクエスト:' . $credentials);
         if (!Auth::attempt($credentials)) {
             throw ValidationException::withMessages([
                 'email' => ['メールアドレスまたはパスワードが正しくありません。'],
