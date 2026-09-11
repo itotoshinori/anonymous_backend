@@ -20,7 +20,7 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'http://localhost:3000',
+        //'http://localhost:3000',
         env('FRONTEND_URL', 'https://anonymous-mail.vercel.app'),
     ],
 

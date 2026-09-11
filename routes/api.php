@@ -10,7 +10,9 @@ Route::middleware('web')->get('/csrf-token', function (Request $request) {
     ]);
 });
 
-Route::post('/login', [AuthController::class, 'login']);
+//Route::post('/login', [AuthController::class, 'login']);
+
+Route::middleware('web')->post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
 
